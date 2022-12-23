@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Theory {
 	/*
 	Вариантность (ковариантность) - переменной типа Employee[] можно присвоить Manager[] (подкласс).
@@ -9,7 +7,7 @@ public class Theory {
 	Списочные массивы ИНВАРИАНТНЫ - наследование не переносится с элементов на AL
 	В ArrayList<Employee> нельзя записать ArrayList<Manager>:
 
-	ArrayList<Manager> bosses = new ArrayList();
+	ArrayList<Manager> bosses = new ArrayList<>();
 	ArrayList<Employee> empls = bosses; // Нельзя, но допустим, что можно ...
 	empls.add(new Employee(...)); // Простой сотрудник среди начальства!
 
@@ -56,5 +54,14 @@ public class Theory {
 		//ArrayList<Object> objectArrayList = new ArrayList<Long>();
 		//objectArrayList.add("String")
 	}
+
+	/*
+	параметр типа в Class<T> нужен для метода T newInstance(), чтобы он возвращал T
+	Это нужно чтобы не тратить ресурсы на приведение типов.
+	Помимо newInstance в Class<T> есть еще несколько методов, где нужен параметр типа:
+	Class<? super T> getSuperclass();
+	<U> Class<? extends U> asSubclass<Class<U> clazz);
+	...
+	 */
 
 }
