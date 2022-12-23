@@ -11,7 +11,8 @@ public class Ex16 {
 	преобразуется в
 	public static void sort(List<Comparable> list)
 
-	public static <T extends Object & Comparable<? super Т » T max (Collections extends T> coll)
+	public static <T extends Object & Comparable<? super Т>> T max (Collection<? extends T> coll)
 	преобразуется в
+	public static Comparable<Object> max (Collection<Object> coll)
 	 */
 }

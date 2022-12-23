@@ -2,7 +2,6 @@ package Ex12;
 
 import Ex06.Accountant;
 import Ex06.Employee;
-import Ex06.Person;
 import Ex10.Arrays;
 
 import java.util.ArrayList;

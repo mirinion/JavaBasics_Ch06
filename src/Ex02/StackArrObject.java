@@ -3,8 +3,6 @@ package Ex02;
 
 import java.util.Arrays;
 import java.util.EmptyStackException;
-import java.util.Objects;
-import java.util.function.IntFunction;
 
 public class StackArrObject<T> {
 	private Object[] arr;

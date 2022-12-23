@@ -1,7 +1,6 @@
 package Ex06;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class Ex06 {
 	public static void main(String[] args) {
