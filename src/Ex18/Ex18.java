@@ -11,18 +11,21 @@ public class Ex18 {
 	 */
 
 	public static void main(String[] args) {
-		//repeat(10,42, int[]::new); - Нельзя из-за запрета на использование примитивов в аргументе типа
-		System.out.println(
-				Arrays.toString(repeat(10, 42, Integer[]::new))
-		);  //Можно использовать boxed. Для других примитивов - другие функц интерфейсы
+		repeat(10,42, int[]::new);
+ //Можно использовать boxed. Для других примитивов - другие функц интерфейсы
 
 	}
 
 	// Метод создает n копий переданного объекта obj в массиве
-	public static <T> T[] repeat(int n, T obj, IntFunction<T[]> constr) {
-		T[] result = constr.apply(n);
+	public static int[] repeat(int n, int obj, ToIntArrFunction constr) {
+		int[] result = constr.apply(n);
 		for (int i = 0; i < n; i++) result[i] = obj;
 		return result;
 	}
 
+}
+
+@FunctionalInterface
+interface ToIntArrFunction {
+	int[] apply(int size);
 }

@@ -29,7 +29,7 @@ public class Ex22 {
 			throws T {
 		try {
 			return c.call();
-		} catch (Throwable realEx) {
+		} catch (Exception realEx) {
 			T exFromOuterConstr = exConstr.get();
 			realEx.initCause(exFromOuterConstr);
 			throw exFromOuterConstr;
